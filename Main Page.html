@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Pennsylvania</title>
+    <link rel="icon" href="logo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="Practical.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="Practical.js"></script> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+    <!-- COVID-19 section -->
+    <div class="outercovid">
+        <div class="penn_Covid-19_Response" id="pennCovid">
+            <a href="#" class="covidLink"><u>Penn COVID-19 Response</u> »</a>
+        </div>
+    </div>
+
+    <video autoplay muted loop id="backVideo" onclick="playVideo(1)">
+        <source src="backVideo.mp4" type="video/mp4">
+    </video>
+
+    <i class="fa-solid fa-pause" id="pauseV"></i>
+    <i class="fa-solid fa-play" id="playV"></i>
+    <!-- search section -->
+    <div id="searchBarOuter">
+        <div id="searchBar">
+
+            <input type="text" name="search" id="searchField" placeholder="Search" onfocus="this.value=''"> <i
+                class="fa fa-search" aria-hidden="true" id="searchIcon2"></i>
+            <label id="closeButton"><i class="fa-solid fa-xmark" id="closemark2"></i>CLOSE</label>
+        </div>
+    </div>
+
+    <div id="searchSection">
+        <span id="searchSectionElement1"><i class="fa fa-search" aria-hidden="true" id="searchIcon"></i></span>
+        <span id="searchSectionElement2">
+            <button id="resourcesButton">RESOURCES<i class="fa-solid fa-angle-down" id="resourceDownIcon"></i></button>
+        </span>
+        <span>
+            <p id="giveToPenn"><a href="#">GIVE TO PENN</a></p>
+        </span>
+        <i class="fa-solid fa-xmark" id="closemark1"></i>
+        <div id="resorcesList">
+            <ul>
+                <li><button id="listButtonUP">RESOURCES<i class="fa-solid fa-angle-up"
+                            id="resourceDownIcon2"></i></button></li>
+                <li><a href="#">Current Students</a></li>
+                <li><a href="#">Faculty & Staff</a></li>
+                <li><a href="#">Parents</a></li>
+                <li><a href="#">Alumni</a></li>
+                <li><a href="#">Visitors</a></li>
+                <li><a href="#">A-Z</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Webmail</a></li>
+                <li><a href="#">Services</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- second section -->
+
+    <div class="secondSection" id="secondSection">
+        <a href="#"><img src="fff.png" alt="University Logo" class="logo" /></a>
+        <hr class="line">
+    </div>
+
+    <!-- navigation division -->
+    <div class="nav" id="nav">
+        <ol>
+            <li class="acedemics"><a href="Academics.html" class="mainnav" id="navAcedemics"
+                    onmouseenter="acedemicApper()">ACEDEMICS<i class="fa-solid fa-angle-down"></i></i></a>
+            </li>
+            <li><a href="002.html" class="mainnav" id="addmision">ADDMISSION & AID</a></li>
+            <li><a href="Athletics.html" class="mainnav" id="athletics">ATHLETICS</a></li>
+            <li class="research"><a href="#" class="mainnav" id="reserch" onmouseenter="researchApper()">RESEARCH &
+                    INNOVATION<i class="fa-solid fa-angle-down"></i></i></a></li>
+            <li class="lifeAtPenn"><a href="#" class="mainnav" id="life" onmouseenter="lifepennApper()">LIFE AT
+                    PENN<i class="fa-solid fa-angle-down"></i></i></a></li>
+            <li class="about" onmouseenter="aboutApper()"><a href="about_us.html" class="mainnav" id="about">ABOUT<i
+                        class="fa-solid fa-angle-down"></i></i></a>
+            </li>
+        </ol>
+    </div>
+
+    <!-- community questions -->
+    <div class="campus_Community">
+        <p class="community"><a href="#">ARTS, HUMANITIES, & SOCIAL SCIENCES</a></p>
+        <h1 class="presidentQuestions"><a href="#">Grappling with a watershed’s uncertain </a><br><span
+                class="questionPresident"><a href="#">en</span>vironmental future</a></h1>
+        <p class="presidentPara"><a href="#">Artists supported by the Penn Program in Environmental Humanities
+                created
+                tools for <br>navigating unpredictable ecological challenges, then brought them to life in a series
+                of<br>
+                public workshops at the Independence Seaport Museum.
+            </a></p>
+    </div>
+
+    <!-- acedemic sublist -->
+    <div class="acedemicSublist" id="acedemicSublist" onmouseleave="acedemicdesapper()">
+        <ul>
+            <li><a href="#">Undergraduate</a></li>
+            <li><a href="#">Graduate</a></li>
+            <li><a href="#">Schools</a></li>
+
+            <li><a href="#">Global Initiatives</a></li>
+            <li><a href="#">Interdisciplinary</a></li>
+            <li><a href="#">Online Learning</a></li>
+
+            <li><a href="#">Off-campus Learning</a></li>
+            <li><a href="#">Libraries</a></li>
+        </ul>
+    </div>
+
+    <!-- <--research sublist-->
+    <div class="researchAndInnovation" id="researchAndInnovation" onmouseleave="researchDessapear()">
+        <ul>
+            <li><a href="#">Research Enterprise</a></li>
+            <li><a href="#">Research News</a></li>
+
+        </ul>
+    </div>
+
+    <!-- life at peenn sublist-->
+    <div class="lifeAtPenn" id="lifeatpen" onmouseleave="lifepennDessapear()">
+        <ul>
+            <li><a href="#">Arts & Culture</a></li>
+            <li><a href="#">Community Involvement</a></li>
+            <li><a href="#">Diversity</a></li>
+            <li><a href="#">Groups & Organizations</a></li>
+            <li><a href="#">Housing & Dining</a></li>
+            <li><a href="#">Health & Wellness</a></li>
+            <li><a href="#">Safety & Security</a></li>
+            <li><a href="#">Spirituality & Religion</a></li>
+        </ul>
+    </div>
+
+    <!-- about sublist-->
+    <div class="about" id="aboutsublist" onmouseleave="aboutDessapear()">
+        <ul>
+            <li><a href="#">Introduction to Penn</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Facts</a></li>
+            <li><a href="#">News, Media, & Communication Services</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Penn’s President, Liz Magill</a></li>
+            <li><a href="#">Trustees & Administration</a></li>
+            <li><a href="#">Policies</a></li>
+        </ul>
+    </div>
+    <!-- news section -->
+    <div class="newsMain">
+        <!-- news top section -->
+        <div class="newsTop">
+            <h1 class="news">News</h1>
+            <select id="NewsTopics" onchange="imageAppear()">
+                <option value="Featured">Featured</option>
+                <option value="Arts">Arts, Humanities, & Social Sciences</option>
+                <option value="CampusCommunity">Campus & Community</option>
+                <option value="EducationBusiness">Education, Business, & Law</option>
+                <option value="healthSciences">Health Sciences</option>
+                <option value="ScienceTechnology">Science & Technology</option>
+            </select>
+        </div>
+        <!-- feature images set -->
+        <div id="feturedImages">
+            <!-- image set 1 -->
+            <div id="imageSet1">
+                <div id="image1">
+                    <a href="#">
+                        <img src="1.jpg" id="featuredImage1"></a>
+                </div>
+                <div id="featureImage1Text">
+                    <p id="image1BottomText1"><a href="#">Arts, Humanities, & Social Sciences</a></p>
+                    <p id="image1BottomText2"><a href="#">Who, What, Why: Tyra Moore on her commitment to mental health
+                            care for Black Ame<span id="airUnderline">ri</span>cans</a></p>
+                </div>
+            </div>
+
+            <!-- image set 2-->
+            <div id="imageSet2">
+
+
+                <div id="image2">
+                    <a href="#">
+                        <img src="2.jpg" id="featuredImage2"></a>
+                </div>
+                <div id="featureImage2Text">
+                    <p id="image2BottomText1"><a href="#">EDUCATION, BUSINESS, & LAW</a></p>
+                    <p id="image2BottomText2"><a href="#">What defines judicial activism? Not being an activist,
+                            says
+                            <span id="airUnderline">Ker</span>mit Roosevelt</a></p>
+                </div>
+                <div id="image3">
+                    <a href="#">
+                        <img src="3.jpg" id="featuredImage3"></a>
+                </div>
+                <div id="featureImage3Text">
+                    <p id="image3BottomText1"><a href="#">EDUCATION, BUSINESS, & LAW</a></p>
+                    <p id="image3BottomText2"><a href="#">How firms can overcome the ‘paradox of prep<span id="airUnderline">are</span>dness’</a>
+                    </p>
+                </div>
+
+
+            </div>
+
+            <!-- image set 3 -->
+            <div id="imageSet3">
+
+
+                <div id="image4">
+                    <a href="#">
+                        <img src="4.jpg" id="featuredImage4" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage4Text">
+                    <p id="image4BottomText1"><a href="#">HEALTH SCIENCES</a></p>
+                    <p id="image4BottomText2"><a href="#">The economic impact <span id="airUnderline">of</span>
+                            rural
+                            hospital closures</a></p>
+                </div>
+                <div id="image5">
+                    <a href="#">
+                        <img src="5.jpg" id="featuredImage5" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage5Text">
+                    <p id="image5BottomText1"><a href="#">ARTS, HUMANITIES, & SOCIAL SCIENCES</a></p>
+                    <p id="image5BottomText2"><a href="#">Examining experimental print in ‘Cut/C<span id="airUnderline">op</span>y/Paste’</a>
+                    </p>
+                </div>
+                <div id="more">
+                    <p id="moreNews"><a href="#">MORE NEWS VIA PENN TODAY</a></p>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- arts and humanities images set -->
+        <div id="artAndHumanitiesImages">
+            <div id="imageSet4">
+
+
+                <div id="image6">
+                    <a href="#">
+                        <img src="6.jpg" id="featuredImage6" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage6Text">
+                    <p id="image6BottomText1"><a href="#">Arts, Humanities, & Social Sciences</a></p>
+                    <p id="image6BottomText2"><a href="#">New Arthur Ross Gallery ex<span id="airUnderline">hib</span>it
+                            ‘From Studio to Doorstep’</a></p>
+                </div>
+                <div id="image7">
+                    <a href="#">
+                        <img src="7.jpg" id="featuredImage7" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage7Text">
+                    <p id="image7BottomText1"><a href="#">ARTS, HUMANITIES, & SOCIAL SCIENCES</a></p>
+                    <p id="image7BottomText2"><a href="#">Who, What, Why: Annenberg doctoral student Ava Irysa
+                            K<span id="airUnderline">ik</span>ut</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="imageSet5">
+
+
+                <div id="image8">
+                    <a href="#">
+                        <img src="8.jpg" id="featuredImage8" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage8Text">
+                    <p id="image8BottomText1"><a href="#">ARTS, HUMANITIES, & SOCIAL SCIENCES</a></p>
+                    <p id="image8BottomText2"><a href="#">Solving the mystery of <span
+                                id="airUnderline">mi</span>gration into Micronesia</a></p>
+                </div>
+                <div id="image9">
+                    <a href="#">
+                        <img src="9.jpg" id="featuredImage9" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage9Text">
+                    <p id="image9BottomText1"><a href="#">ARTS, HUMANITIES, & SOCIAL SCIENCES</a></p>
+                    <p id="image9BottomText2"><a href="#">Boris Johnson’s <span id="airUnderline">do</span>wnfall,
+                            explained</a>
+                    </p>
+                </div>
+                <div id="more2">
+                    <p id="moreNews2"><a href="#">MORE NEWS VIA PENN TODAY</a></p>
+                </div>
+
+            </div>
+
+            <div id="imageSet6">
+
+
+                <div id="image10">
+                    <a href="#">
+                        <img src="10.jpg" id="featuredImage10" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage10Text">
+                    <p id="image10BottomText1"><a href="#">ARTS, HUMANITIES, & SOCIAL SCIENCES</a></p>
+                    <p id="image10BottomText2"><a href="#">The legacy <span id="airUnderline">of </span>Shinzo
+                            Abe</a>
+                    </p>
+                </div>
+                <div id="image11">
+                    <a href="#">
+                        <img src="feturedImage11.jpg" id="featuredImage11" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage11Text">
+                    <p id="image11BottomText1"><a href="#">ARTS, HUMANITIES, & SOCIAL SCIENCES</a></p>
+                    <p id="image11BottomText2"><a href="#">In the pursuit of scientific truth, working with
+                            adversaries
+                            can <span id="airUnderline">pay</span> off</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <!-- campus and community images set -->
+        <div id="campusAndCommunity">
+            <div id="imageSet7">
+
+                <div id="image12">
+                    <a href="#">
+                        <img src="feturedImage12.jpg" id="featuredImage12" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage12Text">
+                    <p id="image12BottomText1"><a href="#">CAMPUS & COMMUNITY</a></p>
+                    <p id="image12BottomText2"><a href="#">Add a friend <span id="airUnderline">
+                                on</span> social media</a></p>
+                </div>
+                <div id="image13">
+                    <a href="#">
+                        <img src="feturedImage13.jpg" id="featuredImage13" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage13Text">
+                    <p id="image13BottomText1"><a href="#">CAMPUS & COMMUNITY</a></p>
+                    <p id="image13BottomText2"><a href="#">Penn Glee Club performs on its first European tour as a
+                            gender-in<span id="airUnderline">clu</span>sive choir</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="imageSet8">
+
+                <div id="image14">
+                    <a href="#">
+                        <img src="feturedImage14.jpg" id="featuredImage14" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage14Text">
+                    <p id="image14BottomText1"><a href="#">CAMPUS & COMMUNITY</a></p>
+                    <p id="image14BottomText2"><a href="#">Curator Dot Porter on rebuilding rare books in a virtual
+                            s<span id="airUnderline">pac</span>e</a></p>
+                </div>
+                <div id="image15">
+                    <a href="#">
+                        <img src="feturedImage15.png" id="featuredImage15" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage15Text">
+                    <p id="image15BottomText1"><a href="#">CAMPUS & COMMUNITY</a></p>
+                    <p id="image15BottomText2"><a href="#">Penn’s new president o<span id="airUnderline">n
+                                ‘t</span>he
+                            honor of a lifetime’</a>
+                    </p>
+                </div>
+                <div id="more3">
+                    <p id="moreNews3"><a href="#">MORE NEWS VIA PENN TODAY</a></p>
+                </div>
+            </div>
+
+            <div id="imageSet9">
+
+                <div id="image16">
+                    <a href="#">
+                        <img src="feturedImage16.jpg" id="featuredImage16" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage16Text">
+                    <p id="image16BottomText1"><a href="#">CAMPUS & COMMUNITY</a></p>
+                    <p id="image16BottomText2"><a href="#">An ice cream social w<span id="airUnderline">ith</span>
+                            Penn’s new president</a></p>
+                </div>
+                <div id="image17">
+                    <a href="#">
+                        <img src="17.jpg" id="featuredImage17" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage17Text">
+                    <p id="image17BottomText1"><a href="#">CAMPUS & COMMUNITY</a></p>
+                    <p id="image17BottomText2"><a href="#">Be in the Know returns <span
+                                id="airUnderline">for</span>wellness in 2022-2023</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <!-- Education and business images set -->
+        <div id="educationBusiness">
+            <div id="imageSet10">
+
+                <div id="image18">
+                    <a href="#">
+                        <img src="feturedImage18.jpeg" id="featuredImage18" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage18Text">
+                    <p id="image18BottomText1"><a href="#">EDUCATION, BUSINESS, & LAW</a></p>
+                    <p id="image18BottomText2"><a href="#">A cleaner, greener <span id="airUnderline">air</span>port
+                            of
+                            the future</a></p>
+                </div>
+                <div id="image19">
+                    <a href="#">
+                        <img src="feturedImage19.jpeg" id="featuredImage19" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage19Text">
+                    <p id="image19BottomText1"><a href="#">EDUCATION, BUSINESS, & LAW</a></p>
+                    <p id="image19BottomText2"><a href="#">The Supreme Court restricts the EPA’s power to curb
+                            climat<span id="airUnderline">e c</span>hange</a>
+                    </p>
+                </div>
+
+            </div>
+            <div id="imageSet11">
+
+                <div id="image20">
+                    <a href="#">
+                        <img src="feturedImage20.jpg" id="featuredImage20" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage20Text">
+                    <p id="image20BottomText1"><a href="#">EDUCATION, BUSINESS, & LAW</a></p>
+                    <p id="image20BottomText2"><a href="#">Penn Law reactions to SCOTUS EPA ruling on climate
+                            ch<span id="airUnderline">an</span>ge</a></p>
+                </div>
+                <div id="image21">
+                    <a href="#">
+                        <img src="feturedImage21.jpg" id="featuredImage21" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage21Text">
+                    <p id="image21BottomText1"><a href="#">EDUCATION, BUSINESS, & LAW</a></p>
+                    <p id="image21BottomText2"><a href="#">Hong Kong han<span id="airUnderline">do</span>ver, 25
+                            years
+                            later</a>
+                    </p>
+                </div>
+                <div id="more4">
+                    <p id="moreNews4"><a href="#">MORE NEWS VIA PENN TODAY</a></p>
+                </div>
+            </div>
+            <div id="imageSet12">
+
+                <div id="image22">
+                    <a href="#">
+                        <img src="feturedImage22.jpg" id="featuredImage22" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage22Text">
+                    <p id="image22BottomText1"><a href="#">EDUCATION, BUSINESS, & LAW</a></p>
+                    <p id="image22BottomText2"><a href="#">A mashup of mark<span id="airUnderline">etin</span>g and
+                            neuroscience</a></p>
+                </div>
+                <div id="image23">
+                    <a href="#">
+                        <img src="23.jpg" id="featuredImage23" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage23Text">
+                    <p id="image23BottomText1"><a href="#">EDUCATION, BUSINESS, & LAW</a></p>
+                    <p id="image23BottomText2"><a href="#">Wharton studen<span id="airUnderline">ts </span>go
+                            international</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Health and Science  images set -->
+        <div id="healthAndSciences">
+            <div id="imageSet13">
+
+                <div id="image24">
+                    <a href="#">
+                        <img src="feturedImage24.jpg" id="featuredImage24" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage24Text">
+                    <p id="image24BottomText1"><a href="#">HEALTH SCIENCES</a></p>
+                    <p id="image24BottomText2"><a href="#">How Penn’s School of Medicine supports students starting
+                            fa<span id="airUnderline">mil</span>ies</a></p>
+                </div>
+                <div id="image25">
+                    <a href="#">
+                        <img src="25.jpg" id="featuredImage25" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage25Text">
+                    <p id="image25BottomText1"><a href="#">HEALTH SCIENCES</a></p>
+                    <p id="image25BottomText2"><a href="#">‘Stop the Bleed’ program helps bystanders in India aid
+                            accident vi<span id="airUnderline">cti</span>ms</a>
+                    </p>
+                </div>
+            </div>
+            <div id="imageSet14">
+
+                <div id="image26">
+                    <a href="#">
+                        <img src="feturedImage26.jpg" id="featuredImage26" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage26Text">
+                    <p id="image26BottomText1"><a href="#">HEALTH SCIENCES</a></p>
+                    <p id="image26BottomText2"><a href="#">How to navigate anoth<span id="airUnderline">er
+                            </span>summer
+                            of COVID-19</a></p>
+                </div>
+                <div id="image27">
+                    <a href="#">
+                        <img src="27.jpg" id="featuredImage27" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage27Text">
+                    <p id="image27BottomText1"><a href="#">HEALTH SCIENCES</a></p>
+                    <p id="image27BottomText2"><a href="#">New research maps possible molecular origins of kidney
+                            di<span id="airUnderline">sea</span>se</a>
+                    </p>
+                </div>
+                <div id="more5">
+                    <p id="moreNews5"><a href="#">MORE NEWS VIA PENN TODAY</a></p>
+                </div>
+            </div>
+            <div id="imageSet15">
+
+                <div id="image28">
+                    <a href="#">
+                        <img src="28.jpg" id="featuredImage28" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage28Text">
+                    <p id="image28BottomText1"><a href="#">HEALTH SCIENCES</a></p>
+                    <p id="image28BottomText2"><a href="#">Both gun owners and non-gun owners trust doctors in gun
+                            safe<span id="airUnderline">ty </span>talks</a></p>
+                </div>
+                <div id="image29">
+                    <a href="#">
+                        <img src="29.jpg" id="featuredImage29" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage29Text">
+                    <p id="image29BottomText1"><a href="#">HEALTH SCIENCES</a></p>
+                    <p id="image29BottomText2"><a href="#">The economic impact <span id="airUnderline">of
+                            </span>rural
+                            hospital closures</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Science and Technology images set -->
+        <div id="scienceAndTechnology">
+            <div id="imageSet16">
+
+                <div id="image30">
+                    <a href="#">
+                        <img src="feturedImage30.jpg" id="featuredImage30" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage30Text">
+                    <p id="image30BottomText1"><a href="#">SCIENCE & TECHNOLOGY</a></p>
+                    <p id="image30BottomText2"><a href="#">Music-making an<span id="airUnderline">d t</span>he flow
+                            of
+                            aerosols</a></p>
+                </div>
+                <div id="image31">
+                    <a href="#">
+                        <img src="31.jpg" id="featuredImage31" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage31Text">
+                    <p id="image31BottomText1"><a href="#">SCIENCE & TECHNOLOGY</a></p>
+                    <p id="image31BottomText2"><a href="#">Penn Abroad: Rising senior <span
+                                id="airUnderline">Ri</span>cardo Del Rio in
+                            Switzerland</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="imageSet17">
+
+                <div id="image32">
+                    <a href="#">
+                        <img src="feturedImage32.jpg" id="featuredImage32" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage32Text">
+                    <p id="image32BottomText1"><a href="#">SCIENCE & TECHNOLOGY</a></p>
+                    <p id="image32BottomText2"><a href="#">The Higgs boson d<span id="airUnderline">isc</span>overy,
+                            10
+                            years later</a></p>
+                </div>
+                <div id="image33">
+                    <a href="#">
+                        <img src="33.jpeg" id="featuredImage33" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage33Text">
+                    <p id="image33BottomText1"><a href="#">SCIENCE & TECHNOLOGY</a></p>
+                    <p id="image33BottomText2"><a href="#">PIK Professor Kevin Joh<span id="airUnderline">nso</span>n:
+                            Informatics evangelist</a>
+                    </p>
+                </div>
+                <div id="more6">
+                    <p id="moreNews6"><a href="#">MORE NEWS VIA PENN TODAY</a></p>
+                </div>
+            </div>
+            <div id="imageSet18">
+
+                <div id="image34">
+                    <a href="#">
+                        <img src="feturedImage34.jpg" id="featuredImage34" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage34Text">
+                    <p id="image34BottomText1"><a href="#">SCIENCE & TECHNOLOGY</a></p>
+                    <p id="image34BottomText2"><a href="#">Shapeshifting microrobo<span id="airUnderline">ts
+                            </span>can
+                            brush and floss teeth</a></p>
+                </div>
+                <div id="image35">
+                    <a href="#">
+                        <img src="35.jpeg" id="featuredImage35" width="200px" height="100px"></a>
+                </div>
+                <div id="featureImage35Text">
+                    <p id="image35BottomText1"><a href="#">SCIENCE & TECHNOLOGY</a></p>
+                    <p id="image35BottomText2"><a href="#">Deconstructing the mech<span id="airUnderline">ani</span>cs
+                            of bone marrow disease</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- third Section -->
+    <div id="thirdSection">
+        <img src="campusAndCommunityImage.jpg" width="200px" height="100px" id="campusCommunityImage">
+        <div id="outerReview">
+            <div id="review">
+                <p id="label1">Campus & Community</p>
+                <p id="oldTraditions"><a href="#">2021-22 in review: A return to old traditions an<span
+                            id="andUnderline">d </span> New normals</a></p>
+                <p id="label2">Many in-person traditions returned to campus this year after a lengthy hiatus,
+                    including
+                    classes, but Penn’s output of research, innovation, and growth never slowed throughout the year.
+                </p>
+                <p id="label3"><a href="#" id="fullStory">FULL STORY</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- upcomming events -->
+    <div id="upcommingEvents">
+        <div id="upcommingEventsTitile">
+            <p>Upcoming Events</p>
+        </div>
+        <div id="eventDates">
+            <div id="event1">
+                <div id="forTheKids">
+                    <p id="forKidsTitle"><span id="titleUnderline">FO</span>R THE KIDS</p>
+                    <div id="evenDate1">
+                        <div id="edate1">
+                            <div id="firstBox">
+                                <p id="month1">MAY</p>
+                            </div>
+                            <div id="secondBox">
+                                <p id="date1">27</p>
+                            </div>
+                        </div>
+                        <div id="evenDetails">
+                            <p><a href="#" id="event1DetailsHeading">Garden Railway 2022</a></p>
+                            <p id="event1DetailsParagraph">The quarter-mile Garden Railway returns for the summer
+                                season,
+                                this year with a theme of America’s Roadside Attractions. The railway features
+                                miniature
+                                versions of the Jolly Green Giant, the World’s Oldest Largest Pecan, and more.</p>
+                            <p id="eventHappeingtime1">ENDS OCTOBER 10, 2022</p>
+                            <div id="moreEvents">
+                                <p "><a href=" #" id="moreEventsLink">MORE EVENTS VIA PENN TODAY</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="event2">
+                <div id="even1ImageSection">
+                    <img src="eventImage1.jpeg" width="100px" height="50px" id="even1Image">
+                </div>
+                <div id="screening">
+                    <p id="sreeningTitle"><span id="titleUnderline">SC</span>REENINGS</p>
+                </div>
+                <div id="evenDate2">
+                    <div id="firstBox2">
+                        <p id="month2">JUN</p>
+                    </div>
+                    <div id="secondBox2">
+                        <p id="date2">13</p>
+                    </div>
+                </div>
+                <div id="even2Details">
+                    <p><a href="#" id="event2DetailsHeading">Isaac Julien</a></p>
+                    <p id="event2DetailsParagraph">Three film works are presented: “Looking for Langston,”
+                        “Territories,” and “The Passion of Remembrance,” by artist and filmmaker Isaac Julien, from
+                        the
+                        Sankofa Film and Video Collective. These are screened as a programmatic series at the
+                        Annenberg
+                        Center for the Performing Arts. Each screening features a conversation between a scholar and
+                        artist or filmmaker; the showings are curated by the Institute of Contemporary Art, Penn
+                        Live
+                        Arts, and BlackStar Projects.</p>
+                    <p id="event2Happeingtime">ENDS AUGUST 3, 2022</p>
+                </div>
+            </div>
+            <div id="event3">
+                <div id="event3ImageSection">
+                    <img src="eventImage2.jpeg" width="100px" height="50px" id="event3Image">
+                </div>
+                <div id="exhibits">
+                    <p id="exhibitsTitle"><span id="titleUnderline">EX</span>HIBITS</p>
+                </div>
+                <div id="eventDate3">
+                    <div id="firstBox3">
+                        <p id="month3">JUN</p>
+                    </div>
+                    <div id="secondBox3">
+                        <p id="date3">18</p>
+                    </div>
+                </div>
+                <div id="event3Details">
+                    <p><a href="#" id="event3DetailsHeading">Associated American Artists</a></p>
+                    <p id="event3DetailsParagraph">The Arthur Ross Gallery features the exhibit “From Studio to
+                        Doorstep: Associated American Artist Prints (1934-2000),” an exhibition on paper produced by
+                        Associated American Artists (AAA), a company founded in New York in 1934 with the intention
+                        of
+                        revolutionizing the art market.</p>
+                    <p id="event3Happeingtime">ENDS AUGUST 21, 2022</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 4th section -->
+    <div id="forthSection">
+        <div id="leftBoxOuter">
+            <div id="leftBox">
+                <a href="#"><img src="leftBoxImage.png" width="100px" height="30px" id="leftBoxImage"></a>
+                <div id="leftBoxDetails">
+                    <p>Your support ignites c<span id="leftBoxUnderline">han</span>ge locally and globally,
+                        transforming
+                        Penn into a powerful engine that
+                        advances
+                        knowledge for society’s greatest good.</p>
+                </div>
+                <div id="supportPen">
+                    <p><a href="#" id="supportPennText">SUPPORT PENN</a></p>
+                </div>
+            </div>
+        </div>
+        <div id="rightBoxOuter">
+            <div id="rightBox">
+                <a href="#"><img src="rightBoxImage.png" width="100px" height="30px" id="rightBoxImage"></a>
+                <div id="rightBoxDetails">
+                    <p>The Penn community s<span id="rightBoxUnderline">ho</span>uld
+                        remember that our decisions impact the lives and health of students, classmates, colleagues,
+                        and our West Philadelphia neighbors.</p>
+                </div>
+                <div id="Penncare">
+                    <p><a href="#" id="carePennText">PENN CARES</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 5th section -->
+    <div id="fifthSecion">
+        <div id="penPriorites">
+            <p id="penPrioritesTitile">Penn Priorities</p>
+            <p id="penPrioritesDetails">A look at a few of our big picture p<span
+                    id="prioritesUnderline">rioritie</span>s that improve Penn as we create
+                <br>knowledge to benefit the world.
+            </p>
+            <div class="swiper mySwiper">
+                <i class="fa-solid fa-angle-left" id="swiper-button-prev"></i>
+                <i class="fa-solid fa-angle-right" id="swiper-button-next"></i>
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide"> <img src="galleryImage1.jpg" id="galImg1">
+
+                        <div id="img1set1">
+                            <a href="#"><span id="whitePart">Climate and Sustainability Action Plan</span><span
+                                    id=brownPart><i class="fa-solid fa-angle-right" id="brownArrow"></i></span></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide"><img src="galleryImage2.jpg" id="galImg2">
+                        <div id="img1set1">
+                            <a href="#"><span id="whitePart">Diversity and Inclusion</span><span id=brownPart><i
+                                        class="fa-solid fa-angle-right" id="brownArrow"></i></span></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide"><img src="galleryImage3.jpg" id="galImg3">
+                        <div id="img1set1">
+                            <a href="#"><span id="whitePart">Campaign for Community</span><span id=brownPart><i
+                                        class="fa-solid fa-angle-right" id="brownArrow"></i></span></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide"><img src="galleryImage4.jpg" id="galImg3">
+                        <div id="img1set1">
+                            <a href="#"><span id="whitePart">Penn Cares</span><span id=brownPart><i
+                                        class="fa-solid fa-angle-right" id="brownArrow"></i></span></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <div id="stayConnected">
+        <div id="stayConnectedTitleBox">
+            <p id="stayConnectedTitle">Stay C<span id="stayConnectedUnderline">on</span>nected</p>
+        </div>
+        <div id="stayConnectedLeftBoxSection">
+            <a href="https://www.instagram.com/p/CdRPHOrstfL/" id="leftBoxAtag">
+                <img src="stayConnectedImage1.png" width="100px" height="50px" id="stayConnectedLeftImage">
+                <p id="appearTextStayConnectedLeftBox">Issues of human rights and justice are integral to
+                    programming at @perryworldhouse, Penn’s hub for
+                    global engagement—where, earlier this year, Perry World House Executive Director LaShawn
+                    Jefferson
+                    and Rangita de Silva de Alwis, Senior Adjunct Professor of Global Leadership and Associate
+                    Dean
+                    of
+                    International Affairs at Penn Carey Law (pictured), spoke during a hybrid event, “Global
+                    Justice
+                    –
+                    The Struggle for Women’s Human Rights.”<br /><br /><i class="fa-brands fa-instagram"
+                        id="instaCircle"></i>
+                    @UOFPENN</p>
+                <div id="secondBox1"></div>
+            </a>
+        </div>
+
+        <div id="stayConnectedmiddleBoxSection">
+            <a href="https://twitter.com/Penn/status/1523690517770514434?cxt=HHwWhMC9tf-cnqUqAAAA" id="middleBoxAtag">
+                <p id="appearTextStayConnectedmiddleBox">Participants in a course on Chinese diasporas taught by
+                    Ph.D. candidate Sarah Yu of @PennSAS spent a day as tour guides in Philadelphia’s lively
+                    Chinatown. The exercise honed their public speaking skills while they learned about Chinese
+                    migration.<br /><br /><i class="fa-brands fa-twitter" id="twitterCircle"></i>
+                    @PENN
+                </p>
+            </a>
+        </div>
+
+
+    </div>
+    <div id="stayConnectedRightBoxSection">
+        <a href="https://www.instagram.com/p/CdMaPLbFrKN/" id="RightBoxAtag">
+            <img src="stayConnectedImage2.png" width="100px" height="50px" id="stayConnectedRighttImage">
+            <p id="appearTextStayConnectedRightBox">
+                As a response to anti-Black violence, Lucas Monroe, a junior in the School of Arts & Sciences from
+                Abington, Pennsylvania, took on a leadership role in social justice work.<br /><br /><i
+                    class="fa-brands fa-instagram" id="instaCircleRight"></i>
+                @UOFPENN</p>
+            <div id="secondRight"></div>
+        </a>
+    </div>
+    <div id="stayConnectedSocialMediaSet">
+        <span><a href="https://www.instagram.com/accounts/login/?next=/uofpenn/"><i class="fa-brands fa-instagram"
+                    id="socialCircle"></i></a></span> <span><a href="https://www.facebook.com/UnivPennsylvania"><i
+                    class="fa-brands fa-facebook-square" id="socialCircle"></i></a></span><span><a
+                href="https://twitter.com/Penn"><i class="fa-brands fa-twitter"
+                    id="socialCircle"></i></a></span><span><a
+                href="https://www.flickr.com/photos/universityofpennsylvania/albums"><i class="fa-brands fa-flickr"
+                    id="socialCircle"></i></a></span></span><span><a
+                href="https://www.youtube.com/user/univpennsylvania"><i class="fa-brands fa-youtube"
+                    id="socialCircle"></i></a></span></span><span><a
+                href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHk2djLljXKawAAAYHz46toIaK5RzoFTHnIm5zO9QC0Vt6MXIjbt7dAuq_-qU_KpF_STk1IG_YUrwlGHmgT-oASDsenMmJZ10yslmIm9jRVpfCtWDgxmWP-1vy-EraE5lbo_Oo=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Funiversity-of-pennsylvania"><i
+                    class="fa-brands fa-linkedin" id="socialCircle"></i></a></span>
+    </div>
+    </div>
+    <div id="sixthSection">
+        <p id="sixthSectionHeading">Equal Opportunity and Nondiscrimination at Penn</p>
+        <p id="sixthSectionPara">The University of Pennsylvania values diversity and seeks talented students, faculty
+            and staff from diverse backgrounds. The University of Pennsylvania does not discriminate on the basis of
+            race, color, sex, sexual orientation, gender identity, religion, creed, national or ethnic origin,
+            citizenship status, age, disability, veteran status or any other legally protected class status in the
+            administration of its admissions, financial aid, educational or athletic programs, or other
+            University-administered programs or in its employment practices. Questions or complaints regarding this
+            policy should be directed to the Executive Director of the Office of Affirmative Action and Equal
+            Opportunity Programs, Franklin Building, 3451 Walnut Street, Suite 421, Philadelphia, PA 19104-6106; or
+            (215) 898-6993 (Voice).</p>
+        <a href="#" id="sixthSectionButtonText">
+            <p id="sixthSectionButton">NONDISCRIMINATION STATEMENT</p>
+        </a>
+    </div>
+    <div id="seventhSection">
+        <img src="footer-16.png" width="auto" height="auto" id="back">
+        <div id="topLeft">
+
+            <ul id="topLeftList1">
+                <li><img src="fff.png" id="topLeftImage" width="100px" height="200px"></li>
+                <li>Philadelphia, PA 19104</li>
+                <li>Telephone: <a href="tel:2158985000">(215) 898-5000</a></li>
+            </ul>
+            <ul id="topLeftList2">
+                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#">MAPS</a></li>
+                <li><a href="#">PARKING</a></li>
+            </ul>
+        </div>
+        <div id="topMiddle">
+            <ul>
+                <li id="topMiddleNavigate">Navigate</li>
+                <li><a href="#">ALUMNI</a></li>
+                <li><a href="#">ATHLETICS</a></li>
+                <li><a href="#">DIVERSITY</a></li>
+                <li><a href="#">HEALTH CARE</a></li>
+                <li><a href="#">LIBRARIES</a></li>
+                <li><a href="#">ONLINE LEARNING</a></li>
+                <li><a href="#">PENN GLOBAL</a></li>
+            </ul>
+        </div>
+        <div id="topRight">
+            <p id="topRightPennHertage">Penn's Heritage</p>
+            <p id="toprightPara">As America’s first university, Penn has a history that dates back to 1740 and shares
+                many ties with the colonial city of Philadelphia and the birth of our nation.</p>
+            <a href="#" id="topRightHistroyButtonText">
+                <p id="topRightHistroyButton">OUR HISTORY</p>
+            </a>
+        </div>
+        <div id="bottomLeft">
+            <span id="backtop"><a><i class="fa-solid fa-arrow-up-long" id="angleUp"></i> BACK TO TOP</a></span>
+        </div>
+        <div id="bottomRight">
+            <ul id="bottomRightList">
+                <li><a href="#">DISCLAIMER</a></li>
+                <li><a href="#">EMERGENCY SERVICES</a></li>
+                <li><a href="#">NONDISCRIMINATION</a></li>
+                <li><a href="#">PRIVACY POLICY</a></li>
+                <li><a href="#">REPORT ACCESSIBILITY ISSUES AND GET HELP</a></li>
+                <li><a href="#">REPORT COPYRIGHT INFRINGEMENT</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="Practical.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1.75,
+            spaceBetween: 55,
+            slidesPerGroup: 1,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: "#swiper-button-next",
+                prevEl: "#swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>
